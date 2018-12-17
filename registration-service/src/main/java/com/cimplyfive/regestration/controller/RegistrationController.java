@@ -29,7 +29,7 @@ public class RegistrationController {
 	}
 	
 	/**
-	 * save method stores the data in db.
+	 * save method stores the data in mongodb.
 	 * @param registrationModel
 	 * @return
 	 */
