@@ -36,9 +36,9 @@ public class RegistrationController {
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	public String save(@ModelAttribute("attr") RegistrationModel registrationModel) {
 		boolean result = service.saveRegistration(registrationModel);
-//		if(result == true) {
-//			service.sendCOnfirmationMail(registrationModel);
-//		}
+		if(result == true) {
+			service.sendCOnfirmationMail(registrationModel);
+		}
 		return "redirect:index";
 	}
 
