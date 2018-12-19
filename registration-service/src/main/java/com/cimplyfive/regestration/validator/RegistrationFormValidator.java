@@ -18,7 +18,6 @@ public class RegistrationFormValidator implements Validator{
 
 	@Override
 	public void validate(Object target, Errors errors) {
-		// TODO Auto-generated method stub
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "firstName", "NotEmpty.valid.firstname");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "lastName", "NotEmpty.valid.lastname");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "emailId", "NotEmpty.valid.emailId");
