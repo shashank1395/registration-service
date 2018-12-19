@@ -2,55 +2,88 @@ package com.cimplyfive.regestration.model;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
 
 /**
  * @author shashank
  *
  */
-public class RegistrationModel implements Serializable{
+public class RegistrationModel implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@NotEmpty
+	@Pattern(regexp = "^[A-Za-z]+$")
+	@Size(min = 1, max = 20)
 	private String firstName;
-	
+
+	@Pattern(regexp = "^[A-Za-z]+$")
+	@Size(min = 1, max = 20)
 	private String middleName;
-	
+
+	@NotEmpty
+	@Pattern(regexp = "^[A-Za-z]+$")
+	@Size(min = 1, max = 20)
 	private String lastName;
-	
+
+	@NotEmpty
+	@Email
 	private String emailId;
 	
 	private String mobileNumber;
-	
+
+	@NotEmpty
+	@Pattern(regexp = "^[A-Za-z]+$")
+	@Size(min = 1, max = 20)
 	private String organizationName;
-	
+
+	@NotEmpty
+	@Pattern(regexp = "^[A-Za-z]+$")
 	private String designation;
-	
+
+	@NotEmpty
+	@Pattern(regexp = "^[0-9]{10}$")
 	private String officeNumber;
-	
+
+	@NotEmpty
 	private String addressOne;
-	
+
 	private String addressTwo;
-	
+
 	private String landmark;
-	
+
+	@NotEmpty
+	@Pattern(regexp = "^[0-9]{6}$")
 	private String pincode;
-	
+
+	@NotEmpty
+	@Pattern(regexp = "^[A-Za-z]+$")
 	private String city;
-	
+
+	@NotEmpty
+	@Pattern(regexp = "^[A-Za-z]+$")
 	private String state;
-	
+
+	@NotEmpty
+	@Pattern(regexp = "^[A-Za-z]+$")
 	private String country;
-	
+
 	private String emailDigestFrequency;
-	
+
 	public RegistrationModel() {
 		super();
 	}
-	
-	public RegistrationModel(String fname, String mname, String lname, String email, String mobile, String orgname, String desg, String officeNo, String addrOne, String addrTwo, String landmark, String pin, String city, String state, String country, String freq) {
+
+	public RegistrationModel(String fname, String mname, String lname, String email, String mobile, String orgname,
+			String desg, String officeNo, String addrOne, String addrTwo, String landmark, String pin, String city,
+			String state, String country, String freq) {
 		super();
 		this.firstName = fname;
 		this.middleName = mname;
@@ -185,17 +218,17 @@ public class RegistrationModel implements Serializable{
 	public void setCity(String city) {
 		this.city = city;
 	}
-	
+
 	public void setState(String state) {
 		this.state = state;
 	}
-	
+
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	
+
 	public void setEmailFrequency(String emailFrequency) {
 		this.emailDigestFrequency = emailFrequency;
 	}
-	
+
 }
