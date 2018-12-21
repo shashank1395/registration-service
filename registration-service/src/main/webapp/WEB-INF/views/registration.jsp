@@ -19,61 +19,61 @@
 		<c:url var="saveUrl" value="/register/save" />
 		<form:form id="user_form" modelAttribute="attr" method="POST"
 			action="${saveUrl}">
-			<table border='0' width='480px' cellpadding='0' cellspacing='0'
+			<table border='0' width='800px' cellpadding='0' cellspacing='0'
 				align='center'>
 				<tr>
 					<td><label for="first_name">First Name: </label></td>
 					<td><form:input id="first_name" path="firstName" /></td>
-					<td><font color="red"> <form:errors path="firstName"></form:errors></font><br />
+					<td width='480px'><font color="red"> <form:errors path="firstName"></form:errors></font><br />
 					</td>
 				</tr>
 				<tr>
 					<td><label for="middle_name">Middle Name: </label></td>
 					<td><form:input id="middle_name" path="middleName" /></td>
-					<td><font color="red"> <form:errors path="middleName"></form:errors></font><br />
+					<td width='480px'><font color="red"> <form:errors path="middleName"></form:errors></font><br />
 					</td>
 				</tr>
 				<tr>
 					<td><label for="last_name">Last Name: </label></td>
 					<td><form:input id="last_name" path="lastName" /></td>
-					<td><font color="red"> <form:errors path="lastName"></form:errors></font><br />
+					<td width='480px'><font color="red"> <form:errors path="lastName"></form:errors></font><br />
 					</td>
 				</tr>
 				<tr>
 					<td><label for="email_id">Email ID: </label></td>
 					<td><form:input id="email_id" path="emailId" /></td>
-					<td><font color="red"> <form:errors path="emailId"></form:errors></font><br />
+					<td width='480px'><font color="red"> <form:errors path="emailId"></form:errors></font><br />
 					</td>
 				</tr>
 				<tr>
 					<td><label for="mobile_number">Mobile Number: </label></td>
 					<td><form:input id="mobile_number" path="mobileNumber" /></td>
-					<td><font color="red"> <form:errors path="mobileNumber"></form:errors></font><br />
+					<td width='480px'><font color="red"> <form:errors path="mobileNumber"></form:errors></font><br />
 					</td>
 				</tr>
 				<tr>
 					<td><label for="organization_name">Organization Name:
 					</label></td>
 					<td><form:input id="organization_name" path="organizationName" /></td>
-					<td><font color="red"> <form:errors
+					<td width='480px'><font color="red"> <form:errors
 								path="organizationName"></form:errors></font><br /></td>
 				</tr>
 				<tr>
 					<td><label for="designation">Designation: </label></td>
 					<td><form:input id="designation" path="designation" /></td>
-					<td><font color="red"> <form:errors path="designation"></form:errors></font><br />
+					<td width='480px'><font color="red"> <form:errors path="designation"></form:errors></font><br />
 					</td>
 				</tr>
 				<tr>
 					<td><label for="office_number">Office Number: </label></td>
 					<td><form:input id="office_number" path="officeNumber" /></td>
-					<td><font color="red"> <form:errors path="officeNumber"></form:errors></font><br />
+					<td width='480px'><font color="red"> <form:errors path="officeNumber"></form:errors></font><br />
 					</td>
 				</tr>
 				<tr>
 					<td><label for="address_one">Address 1: </label></td>
 					<td><form:input id="address_one" path="addressOne" /></td>
-					<td><font color="red"> <form:errors path="addressOne"></form:errors></font><br />
+					<td width='480px'><font color="red"> <form:errors path="addressOne"></form:errors></font><br />
 					</td>
 				</tr>
 				<tr>
@@ -87,19 +87,19 @@
 				<tr>
 					<td><label for="pin_code">Pincode: </label></td>
 					<td><form:input id="pin_code" path="pincode" /></td>
-					<td><font color="red"> <form:errors path="pincode"></form:errors></font><br />
+					<td width='480px'><font color="red"> <form:errors path="pincode"></form:errors></font><br />
 					</td>
 				</tr>
 				<tr>
 					<td><label for="city">City: </label></td>
 					<td><form:input id="city" path="city" /></td>
-					<td><font color="red"> <form:errors path="city"></form:errors></font><br />
+					<td width='480px'><font color="red"> <form:errors path="city"></form:errors></font><br />
 					</td>
 				</tr>
 				<tr>
 					<td><label for="state">State: </label></td>
 					<td><form:input id="state" path="state" /></td>
-					<td><font color="red"> <form:errors path="state"></form:errors></font><br />
+					<td width='480px'><font color="red"> <form:errors path="state"></form:errors></font><br />
 					</td>
 				</tr>
 				<tr>
