@@ -1,6 +1,5 @@
 package com.cimplyfive.regestration.controller;
 
-import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
@@ -13,7 +12,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.Validator;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -22,7 +20,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.cimplyfive.regestration.model.RegistrationModel;
 import com.cimplyfive.regestration.service.RegistrationService;
-import com.cimplyfive.regestration.validator.RegistrationFormValidator;
 
 @Controller
 @RequestMapping("/register")
@@ -33,6 +30,7 @@ public class RegistrationController {
 	@Resource(name = "registrationService")
 	private RegistrationService service;
 
+	@Autowired
 	@Qualifier("registrationFormValidator")
 	private Validator validator;
 
@@ -59,9 +57,8 @@ public class RegistrationController {
 	 * @return
 	 */
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
-	public String save(@Valid @ModelAttribute("attr") RegistrationModel registrationModel, BindingResult result) {
+	public String save(@ModelAttribute("attr") @Valid RegistrationModel registrationModel, BindingResult result) {
 		logger.debug("save() : {}", registrationModel);
-		validator.validate(registrationModel, result);
 		if (result.hasErrors()) {
 			return "registration";
 		} else {

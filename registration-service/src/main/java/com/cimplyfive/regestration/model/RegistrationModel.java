@@ -2,12 +2,6 @@ package com.cimplyfive.regestration.model;
 
 import java.io.Serializable;
 
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
-
-import org.hibernate.validator.constraints.Email;
-import org.hibernate.validator.constraints.NotEmpty;
-
 /**
  * @author shashank
  *
@@ -19,60 +13,34 @@ public class RegistrationModel implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	@NotEmpty
-	@Pattern(regexp = "^[A-Za-z]+$")
-	@Size(min = 1, max = 20)
 	private String firstName;
 
-	@Pattern(regexp = "^[A-Za-z]+$")
-	@Size(min = 1, max = 20)
 	private String middleName;
 
-	@NotEmpty
-	@Pattern(regexp = "^[A-Za-z]+$")
-	@Size(min = 1, max = 20)
 	private String lastName;
 
-	@NotEmpty
-	@Email
 	private String emailId;
 	
 	private String mobileNumber;
 
-	@NotEmpty
-	@Pattern(regexp = "^[A-Za-z]+$")
-	@Size(min = 1, max = 20)
 	private String organizationName;
 
-	@NotEmpty
-	@Pattern(regexp = "^[A-Za-z]+$")
 	private String designation;
 
-	@NotEmpty
-	@Pattern(regexp = "^[0-9]{10}$")
 	private String officeNumber;
 
-	@NotEmpty
 	private String addressOne;
 
 	private String addressTwo;
 
 	private String landmark;
 
-	@NotEmpty
-	@Pattern(regexp = "^[0-9]{6}$")
 	private String pincode;
 
-	@NotEmpty
-	@Pattern(regexp = "^[A-Za-z]+$")
 	private String city;
 
-	@NotEmpty
-	@Pattern(regexp = "^[A-Za-z]+$")
 	private String state;
 
-	@NotEmpty
-	@Pattern(regexp = "^[A-Za-z]+$")
 	private String country;
 
 	private String emailDigestFrequency;
